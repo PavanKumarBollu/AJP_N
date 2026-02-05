@@ -1,0 +1,38 @@
+package com.pavan.test;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.pavan.util.HibernateUtil;
+
+
+public class SaveStudent {
+
+	public static void main(String[] args) {
+		Session session = null;
+		Transaction transaction  = null;
+		
+		try {
+			
+			session = HibernateUtil.getSession();
+			
+			if(session != null)
+			{
+				transaction = session.beginTransaction();
+			
+			}
+			
+			
+			
+		}catch(HibernateException e)
+		{
+			e.printStackTrace();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.pavan.model;
+
+public class Student {
+	
+	private Integer sId;
+	private String sName;
+	private Integer sAge;
+	private String cName;
+	
+	// this constructor has to be there compulsorly beacuase hibernate internally uses this constructor for building the object
+	public Student() {
+		super();
+		System.out.println("Hiber nate called this constructor");
+	}
+	
+	
+
+}

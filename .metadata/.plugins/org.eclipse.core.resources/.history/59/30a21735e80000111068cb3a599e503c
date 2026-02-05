@@ -1,0 +1,23 @@
+package com.pavan.repo;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class InsertAPP {
+	
+	public static int insertData()
+	{
+		try {
+			Connection connection = JdbcUtil.getConncetion();
+			Statement statement = connection.createStatement();
+			
+			int result = statement.executeUpdate("insert into employee (emp_id, name, age,salary values ('emp_1','Nagalashmi',21,10000.50)");
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		return 0;
+	}
+
+}

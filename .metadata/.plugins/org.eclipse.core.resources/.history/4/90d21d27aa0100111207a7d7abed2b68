@@ -1,0 +1,29 @@
+package com.pavan.repo;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class GetEmployeeById {
+	
+	public static EmployeeDTO getEmployeeById(String id)
+	{
+		try {
+			Connection conncetion = JdbcUtil.getConncetion();
+			Statement statement = conncetion.createStatement();
+			
+			ResultSet resultSet = statement.executeQuery("select emp_id, name, age, salary from employee where emp_id = '"+ id + "' )");
+			
+			return new EmployeeDTO(resultSet.getString("emp_id"), resultSet.getString("name"), resultSet.getInt("age"), resultSet.getDouble("salary"));
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+		return null;
+	}
+
+}

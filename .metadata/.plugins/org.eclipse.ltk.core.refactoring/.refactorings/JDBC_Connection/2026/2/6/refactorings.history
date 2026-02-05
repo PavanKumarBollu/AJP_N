@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;name&apos; in &apos;com.pavan.util.Test&apos; to &apos;userName&apos;&#x0D;&#x0A;- Original project: &apos;JDBC_Connection&apos;&#x0D;&#x0A;- Original element: &apos;com.pavan.util.Test.name&apos;&#x0D;&#x0A;- Renamed element: &apos;com.pavan.util.Test.userName&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;name&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;com.pavan.util{Test.java[Test^name" name="userName" references="true" setter="false" stamp="1770101948312" textual="false" version="1.0"/>
+</session>

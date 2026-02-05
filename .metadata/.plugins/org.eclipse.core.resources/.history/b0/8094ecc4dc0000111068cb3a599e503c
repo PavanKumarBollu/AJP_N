@@ -1,0 +1,19 @@
+package com.pavan.util;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class Test_JDBC_Connection {
+
+	public static void main(String[] args) {
+		
+		
+		String url = "jdbc:mysql://localhost:3306/cmis";
+		String userName = "root";
+		String password = "Pav@0211";
+		
+		Connection connection = DriverManager.getConnection(url, userName, password);
+
+	}
+
+}

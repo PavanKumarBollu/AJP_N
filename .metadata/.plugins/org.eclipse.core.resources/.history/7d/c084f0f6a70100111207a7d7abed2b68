@@ -1,0 +1,38 @@
+package com.pavan.repo;
+
+import java.util.Scanner;
+
+public class TestEmployeeApp {
+	
+	public static void main(String[] args) {
+		
+		EmployeeDTO emp1 = new EmployeeDTO("emp_2", "AA", 51, 12344.50);
+		
+		int result = InsertAPP.insertData(emp1);
+		if(result > 0)
+			System.out.println(result + "rows are effected");
+		
+		
+		
+		
+		
+		
+		while(true) {
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("Hey User How are you today what would you like to do ..?");
+			System.out.println("1 for inserting the employee");
+			System.out.println("2 for getting the employee");
+			System.out.println("3 for viewing all the users");
+			System.out.println("5 for exit");
+			
+			int userChoice = scanner.nextInt();
+			
+			
+			
+		}
+		
+	
+		
+	}
+
+}

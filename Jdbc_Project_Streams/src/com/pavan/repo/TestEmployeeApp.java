@@ -1,0 +1,65 @@
+package com.pavan.repo;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class TestEmployeeApp {
+	
+	public static void main(String[] args) {
+				
+		boolean flag = true;
+		Scanner scanner = new Scanner(System.in);
+		
+		while(flag) {
+			System.out.println("Hey User How are you today what would you like to do ..?");
+			System.out.println("1 for inserting the employee");
+			System.out.println("2 for getting the employee");
+			System.out.println("3 for viewing all the users");
+			System.out.println("5 for exit");
+			
+			int userChoice = scanner.nextInt();
+			
+			switch(userChoice)
+			{
+			case 1:
+				System.out.println("Enter the employee id: ");
+				String empId = scanner.next();
+				
+				System.out.println("Enter the employee name: ");
+				String empName = scanner.next();
+				
+				System.out.println("Enter the employee age ");
+				int empAge = scanner.nextInt();
+				
+				System.out.println("Enter the employee salary ");
+				double empSalary = scanner.nextDouble();
+				
+				EmployeeDTO emp1 = new EmployeeDTO(empId, empName, empAge, empSalary);
+				int result = InsertAPP.insertData(emp1);
+				if(result > 0)
+					System.out.println(result + "rows are effected");				
+				break;
+			case 2:
+				System.out.println("Plese enter the emp Id : ");
+				String eId = scanner.next();
+				EmployeeDTO resultDTO = GetEmployeeById.getEmployeeById(eId);
+				System.out.println( resultDTO);
+				break;
+			case 3:
+				ArrayList<EmployeeDTO> allEmployees = GetAllEmployee.getAllEmployees();
+				allEmployees.stream().forEach(System.out::println);
+				break;
+			default:
+				flag = false;
+				break;
+			
+			}
+			
+		}
+
+	
+		
+	}
+
+}

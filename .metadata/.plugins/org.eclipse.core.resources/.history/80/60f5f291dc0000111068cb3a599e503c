@@ -1,0 +1,10 @@
+package com.pavan.util;
+
+public class Test_JDBC_Connection {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

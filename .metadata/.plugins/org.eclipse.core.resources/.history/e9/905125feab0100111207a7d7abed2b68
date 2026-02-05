@@ -1,0 +1,41 @@
+package com.pavan.repo;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+public class GetAllEmployee {
+	
+	
+	public static ArrayList<EmployeeDTO> getEmployeeById()
+	{
+		
+		ArrayList<EmployeeDTO> list = new ArrayList<EmployeeDTO>();
+		try {
+			Connection conncetion = JdbcUtil.getConncetion();
+			Statement statement = conncetion.createStatement();
+			
+			
+			ResultSet resultSet = statement.executeQuery("select emp_id, name, age, salary from employee");
+			while(resultSet.next())
+			{
+				EmployeeDTO dto = new EmployeeDTO(resultSet.getString("emp_id"), resultSet.getString("name"), resultSet.getInt("age"), resultSet.getDouble("salary"));
+				list.add(dto)
+			}
+			
+			
+			if(!list.isEmpty())
+				return list;
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+		return null;
+	}
+
+}

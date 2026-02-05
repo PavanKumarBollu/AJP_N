@@ -1,0 +1,11 @@
+package com.pavan.util;
+
+public class Test_Jdbc_fStack {
+
+	public static void main(String[] args) {
+		
+		
+		String url = "jdbc:mysql://localhost:3306/javafstack";
+		String userName = "root";
+	}
+}

@@ -1,0 +1,19 @@
+package com.pavan.util;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+public class HibernateUtil {
+	
+	private HibernateUtil() {}
+	
+	
+	
+	SessionFactory sessionFactory = null;
+	Session session = null;
+	
+	
+	
+	
+
+}

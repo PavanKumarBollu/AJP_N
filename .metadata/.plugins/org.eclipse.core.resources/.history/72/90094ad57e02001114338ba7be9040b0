@@ -1,0 +1,61 @@
+package com.pavan.test;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.pavan.model.Student;
+import com.pavan.util.HibernateUtil;
+
+
+public class SaveStudent {
+
+	public static void main(String[] args) {
+		Session session = null;
+		Transaction transaction  = null;
+		boolean flag = false;
+		
+		try {
+			
+			session = HibernateUtil.getSession();
+			
+			if(session != null)
+			{
+				transaction = session.beginTransaction();
+			}
+			
+			if(transaction != null)
+			{
+				Student student = new Student();
+				student.setsId(123);
+				student.setsName("Pavan");
+				student.setsAge(22);
+				student.setcName("JavaFullStack");
+				
+				session.save(student);
+				transaction.commit();
+				flag = true;
+				
+				
+			}
+			
+			
+			
+		}catch(HibernateException e)
+		{
+			e.printStackTrace();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally
+		{
+			
+			
+			HibernateUtil.closeSession(session);
+			HibernateUtil.closeSessionFactory();
+		}
+
+	}
+
+}

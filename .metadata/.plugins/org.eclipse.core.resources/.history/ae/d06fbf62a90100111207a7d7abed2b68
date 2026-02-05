@@ -1,0 +1,21 @@
+package com.pavan.repo;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class GetEmployeeById {
+	
+	public static EmployeeDTO getEmployeeById(String id)
+	{
+		try {
+			Connection conncetion = JdbcUtil.getConncetion();
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+		return null;
+	}
+
+}

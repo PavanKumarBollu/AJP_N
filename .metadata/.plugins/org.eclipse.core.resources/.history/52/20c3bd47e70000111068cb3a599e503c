@@ -1,0 +1,10 @@
+package com.pavan.repo;
+
+public class InsertAPP {
+	
+	public static int insertData()
+	{
+		
+	}
+
+}

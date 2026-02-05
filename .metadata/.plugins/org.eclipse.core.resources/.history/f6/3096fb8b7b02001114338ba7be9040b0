@@ -1,0 +1,25 @@
+package com.pavan.test;
+
+import org.hibernate.HibernateException;
+
+public class SaveStudent {
+
+	public static void main(String[] args) {
+		
+		
+		try {
+			
+			
+			
+			
+		}catch(HibernateException e)
+		{
+			
+		}
+		catch (Exception e) {
+			
+		}
+
+	}
+
+}

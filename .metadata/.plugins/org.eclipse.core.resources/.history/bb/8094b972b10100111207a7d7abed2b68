@@ -1,0 +1,16 @@
+package com.pavan.repo;
+
+public class StreamsPractice {
+	
+	public static void main(String[] args) {
+		List<EmployeeDTO> employees = List.of(
+			    new EmployeeDTO(1, "Pavan", "IT", 60000, 25),
+			    new EmployeeDTO(2, "Ravi", "HR", 45000, 30),
+			    new EmployeeDTO(3, "Anil", "IT", 80000, 28),
+			    new EmployeeDTO(4, "Suresh", "Finance", 90000, 35),
+			    new EmployeeDTO(5, "Kiran", "IT", 50000, 23)
+			);
+
+	}
+
+}

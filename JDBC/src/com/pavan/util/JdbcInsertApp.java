@@ -1,0 +1,30 @@
+package com.pavan.util;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class JdbcInsertApp {
+
+	public static void main(String[] args) {
+		
+		try {
+			Connection connection = JdbcUtil.getConncetion();
+			
+			Statement statement = connection.createStatement();
+			
+			int count = statement.executeUpdate("INSERT INTO JAVAUSERS(USER_NAME , MOBILE) VALUES('Rao',2589632)");
+			if(count > 0 )
+				System.out.println(count + " rows are effected please check the data in the database");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+}

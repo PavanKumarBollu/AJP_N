@@ -1,0 +1,16 @@
+package com.pavan.util;
+
+import java.sql.Connection;
+
+public class JdbcUtil {
+	
+	private JdbcUtil() {};// preventing the object creation of this class
+	
+	
+	
+	public static Connection getConncetion()
+	{
+		
+	}
+
+}

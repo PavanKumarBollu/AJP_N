@@ -1,0 +1,38 @@
+package com.pavan.util;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Test_Jdbc_fStack {
+	public static void main(String[] args) {
+		
+		Connection connection = null;
+		Statement statement = null;
+		ResultSet resultSet = null;
+		
+		String url = "jdbc:mysql://localhost:3306/javafstack";// include your database name
+		String userName = "root";// here mention your userName
+		String password = "Pav@0211";// mention your password
+		
+		try {
+			connection = DriverManager.getConnection(url, userName, password);
+			statement = connection.createStatement();
+			resultSet = statement.executeQuery("Select user_no, user_name, mobile from javausers");
+			while(resultSet.next())
+			{
+				int userNo = resultSet.getInt("user_no");
+				String uName = resultSet.getString("user_name");
+				int mobile = resultSet.getInt("mobile");
+				
+				System.out.println(userNo + " : " + uName + " : " + mobile );
+			}
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+	}
+}

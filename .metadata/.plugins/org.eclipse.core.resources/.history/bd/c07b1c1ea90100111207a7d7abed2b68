@@ -1,0 +1,13 @@
+package com.pavan.repo;
+
+public class GetEmployeeById {
+	
+	public static EmployeeDTO getEmployeeById(String id)
+	{
+		
+		
+		
+		return null;
+	}
+
+}

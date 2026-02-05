@@ -1,0 +1,13 @@
+package com.pavan.repo;
+
+import java.sql.Connection;
+
+public class InsertAPP {
+	
+	public static int insertData()
+	{
+		Connection connection = JdbcUtil.getConncetion();
+		return 0;
+	}
+
+}

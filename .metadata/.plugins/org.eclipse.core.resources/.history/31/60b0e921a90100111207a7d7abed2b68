@@ -1,0 +1,15 @@
+package com.pavan.repo;
+
+import java.sql.Connection;
+
+public class GetEmployeeById {
+	
+	public static EmployeeDTO getEmployeeById(String id)
+	{
+		Connection conncetion = JdbcUtil.getConncetion();
+		
+		
+		return null;
+	}
+
+}

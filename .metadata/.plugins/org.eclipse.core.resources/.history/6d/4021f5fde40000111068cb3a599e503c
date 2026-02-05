@@ -1,0 +1,8 @@
+package com.pavan.util;
+
+public class JdbcUtil {
+	
+	private JdbcUtil() {};// preventing the object creation of this class
+	
+
+}
