@@ -7,6 +7,17 @@ import java.sql.SQLException;
 public class JdbcUtil {
 	
 	private JdbcUtil() {};// preventing the object creation of this class
+
+	static
+	{
+		try{
+
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		}catch(ClassNotFoundException e)
+		{
+			e.printStackTrace();
+		}
+	}
 	
 	private static Connection connection = null;
 	

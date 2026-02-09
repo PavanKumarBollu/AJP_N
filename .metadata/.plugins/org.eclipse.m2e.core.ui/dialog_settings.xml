@@ -43,12 +43,15 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="HB02_SelectOperations"/>
 			<item value="HB01_BasicOperations"/>
 		</list>
 		<list key="name">
+			<item value="HB02_SelectOperations"/>
 			<item value="HB01_BasicOperations"/>
 		</list>
 		<list key="artifactId">
+			<item value="HB02_SelectOperations"/>
 			<item value="HB01_BasicOperations"/>
 		</list>
 		<list key="projectNameTemplate">

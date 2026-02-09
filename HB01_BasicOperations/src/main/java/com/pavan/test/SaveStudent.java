@@ -29,8 +29,8 @@ public class SaveStudent {
 			{
 				
 				Student student = new Student();
-				student.setsId(123);
-				student.setsName("Pavan");
+				student.setsId(129);
+				student.setsName("Kumar");
 				student.setsAge(22);
 				student.setcName("JavaFullStack");
 				
