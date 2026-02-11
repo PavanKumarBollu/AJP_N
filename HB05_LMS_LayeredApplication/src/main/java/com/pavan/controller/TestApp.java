@@ -13,11 +13,26 @@ public class TestApp {
 	public static void main(String[] args) {
 		
 		ICourseService service = new ICourseServiceImpl();
+//		
+//		Course course = service.getCourseById(2l);
+//		
+//		System.out.println(course);
+//		
+		Course course = new Course();
+
+		course.setCourseName("React Development");
+		course.setCourseCode("FRD");
+		course.setCourseAlis("FRD_N");
+		course.setMinBatchSize(20);
+		course.setCourseFee(1200.00);
+		course.setIltHours(200);
+		course.setTotalDurationHours(250);
+		course.setCreatedby("ANP-3634");
+		course.setStatus("Active");
 		
-		Course course = service.getCourseById(2l);
 		
-		System.out.println(course);
-		
+		String result=service.insertCourse(course);
+		System.out.println(result);
 		
 		
 		

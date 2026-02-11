@@ -5,15 +5,12 @@ import com.pavan.persistence.ICourseDao;
 import com.pavan.persistence.ICourseDaoImpl;
 
 public class ICourseServiceImpl implements ICourseService {
-	
+
 	private ICourseDao dao;
-	
-	public ICourseServiceImpl ()
-	{
+
+	public ICourseServiceImpl() {
 		dao = new ICourseDaoImpl();
 	}
-	
-	
 
 	public Course getCourseById(Long id) {
 		Course course = dao.getCourseById(id);
@@ -21,8 +18,7 @@ public class ICourseServiceImpl implements ICourseService {
 	}
 
 	public String insertCourse(Course course) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.insertCourse(course);
 	}
 
 	public String updateCourseById(Course course) {

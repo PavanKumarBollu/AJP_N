@@ -1,5 +1,6 @@
 package com.pavan.persistence;
 
+import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -26,12 +27,26 @@ public class ICourseDaoImpl implements ICourseDao {
 			course = session.get(Course.class, id);
 		}
 		
+		
 		return course;
 	}
 
 	public String insertCourse(Course course) {
-		// TODO Auto-generated method stub
-		return null;
+		session = HibernateUtil.getSession();
+		String msg = null;
+		
+		if(session != null)
+		{
+			transaction = session.beginTransaction();		
+		}
+		if(transaction != null)
+		{
+			session.persist(course);
+			transaction.commit();
+			msg = "Course Has been Saved To the Database";
+		}
+		
+		return msg;
 	}
 
 	public String updateCourseById(Course course) {
