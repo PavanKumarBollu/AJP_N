@@ -1,5 +1,0 @@
-package com.pavan.util;
-
-public class JdbcUtil {
-
-}
