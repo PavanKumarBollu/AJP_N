@@ -18,210 +18,46 @@ public class TestApp {
 //		
 //		System.out.println(course);
 //		
-		Course course = new Course();
-
-		course.setCourseName("React Development");
-		course.setCourseCode("FRD");
-		course.setCourseAlis("FRD_N");
-		course.setMinBatchSize(20);
-		course.setCourseFee(1200.00);
-		course.setIltHours(200);
-		course.setTotalDurationHours(250);
-		course.setCreatedby("ANP-3634");
-		course.setStatus("Active");
+//		Course course = new Course();
+//
+//		course.setCourseName("React Development");
+//		course.setCourseCode("FRD");
+//		course.setCourseAlis("FRD_N");
+//		course.setMinBatchSize(20);
+//		course.setCourseFee(1200.00);
+//		course.setIltHours(200);
+//		course.setTotalDurationHours(250);
+//		course.setCreatedby("ANP-3634");
+//		course.setStatus("Active");
 		
 		
-		String result=service.insertCourse(course);
+//		String result=service.insertCourse(course);
+//		System.out.println(result);
+		
+		
+		
+		// update method test
+		
+//		Course c = new Course();
+//		
+//		c.setId(3l);
+//		c.setEligibility("Bsc Computer science");
+//		
+//		String result= service.updateCourseById(c);
+//		System.out.println(result);
+		
+		
+		
+		
+		
+		// delete the course by using the id
+		
+		Long courseId = 2l;
+		
+		String result = service.deleteCourseById(courseId);
+		
 		System.out.println(result);
 		
 		
-		
-		
-		
-
-	//InsertCourse();
-
-		// Course course = getCourse(1L);
-		// System.out.println(course);
-
-		// for updating the course we need to check first weather the course is
-		// available in the database
-		// or not if available then only we can do the updation otherwise we can't do
-		// the update part
-
-//		Course courseToBeUpdated = getCourse(1L);
-//		
-//		if(courseToBeUpdated != null)
-//		{
-//			courseToBeUpdated.setSelfLearningHours(15);
-//			updateCourse(courseToBeUpdated);
-//		}
-
-	//	deleteCourse(1l);
-
 	}
-
-	public static Course getCourse(Long id) {
-
-		Session session = null;
-		Course course = null;
-		try {
-			// get the session Object with respect to the course
-
-			session = HibernateUtil.getSession();
-
-			if (session != null) {
-				course = session.get(Course.class, id);
-			}
-
-			if (course != null)
-				return course;
-			else
-				return null;
-
-		} catch (HibernateException he) {
-			he.printStackTrace();
-		}
-
-		catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-
-//			HibernateUtil.closeSession(session);
-			// HibernateUtil.closeSessionFactory();
-
-		}
-
-		return null;
-	}
-
-	private static void InsertCourse() {
-		// Insert the New Course to the database
-
-		Session session = null;
-		Transaction transaction = null;
-		boolean flag = false;
-
-		try {
-			// get the session Object with respect to the course
-
-			session = HibernateUtil.getSession();
-
-			if (session != null)
-				transaction = session.beginTransaction();
-
-			if (transaction != null) {
-				Course course = new Course();
-
-				course.setCourseName("JavaBackendDevelopment");
-				course.setCourseCode("AdvancedJavaProgramming");
-				course.setCourseAlis("AJP_N");
-				course.setMinBatchSize(30);
-				course.setCourseFee(1500.00);
-				course.setIltHours(170);
-				course.setTotalDurationHours(230);
-				course.setCreatedby("ANP-3634");
-				course.setStatus("Active");
-
-				session.persist(course);
-				flag = true;
-
-			}
-
-		} catch (HibernateException he) {
-			he.printStackTrace();
-		}
-
-		catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-
-			if (flag) {
-				transaction.commit();
-				System.out.println("Course Hasbeen Saved To the Database");
-			} else {
-				transaction.rollback();
-				System.out.println("course not saved to the database");
-			}
-
-//			HibernateUtil.closeSession(session);
-			// HibernateUtil.closeSessionFactory();
-
-		}
-	}
-
-	private static void updateCourse(Course course) {
-		// Update the Course to the database
-
-		Session session = null;
-		Transaction transaction = null;
-		boolean flag = false;
-
-		try {
-			// get the session Object with respect to the course
-
-			session = HibernateUtil.getSession();
-
-			if (session != null)
-				transaction = session.beginTransaction();
-
-			if (transaction != null) {
-
-				session.merge(course);
-				flag = true;
-
-			}
-
-		} catch (HibernateException he) {
-			he.printStackTrace();
-		}
-
-		catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-
-			if (flag) {
-				transaction.commit();
-				System.out.println("Course Hasbeen Updated To the Database");
-			} else {
-				transaction.rollback();
-				System.out.println("course not Updated to the database");
-			}
-
-//			HibernateUtil.closeSession(session);
-			// HibernateUtil.closeSessionFactory();
-
-		}
-	}
-
-	private static void deleteCourse(Long id) {
-		Session session = null;
-		Transaction transaction = null;
-		try {
-			// get the session Object with respect to the course
-
-			session = HibernateUtil.getSession();
-
-			if (session != null) {
-				transaction = session.beginTransaction();
-				if (transaction != null) {
-					Course course = getCourse(id);
-					if (course != null) {
-						session.remove(course);
-						transaction.commit();
-					}
-
-				}
-
-			}
-
-		} catch (HibernateException he) {
-			he.printStackTrace();
-		}
-
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
 }

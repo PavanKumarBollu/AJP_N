@@ -22,13 +22,11 @@ public class ICourseServiceImpl implements ICourseService {
 	}
 
 	public String updateCourseById(Course course) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.updateCourseById(course);
 	}
 
 	public String deleteCourseById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.deleteCourseById(id);
 	}
 
 }
