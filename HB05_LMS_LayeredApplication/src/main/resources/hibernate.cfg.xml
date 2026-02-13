@@ -7,12 +7,13 @@
 	<session-factory>
 		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
 		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/LearnForLife</property>
-		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.username">postgres</property>
 		<property name="hibernate.connection.password">Pav@0211</property>
 
 		<!-- OPTIONAL PROPERTIES FOR HIBERNATE -->
 
-		<!-- Prepare the query based on the mapping information for the underlying DATABASE -->
+		<!-- Prepare the query based on the mapping information for the underlying 
+			DATABASE -->
 		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 
 		<!--Inform HIBERNATE to display the query on the console it has generated 
@@ -27,6 +28,7 @@
 		<!-- Inform HIBERNATE to create/alter/drop the table -->
 		<property name="hibernate.hbm2ddl.auto">update</property>
 
+		<property name="hibernate.connection.pool_size">5</property>
 
 	</session-factory>
 

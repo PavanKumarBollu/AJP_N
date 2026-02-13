@@ -1,7 +1,0 @@
-package com.pavan.util;
-
-public class HibernateUtil {
-	
-	private HibernateUtil() {}
-
-}

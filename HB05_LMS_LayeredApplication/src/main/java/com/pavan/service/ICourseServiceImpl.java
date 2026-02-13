@@ -6,10 +6,14 @@ import com.pavan.persistence.ICourseDaoImpl;
 
 public class ICourseServiceImpl implements ICourseService {
 
-	private ICourseDao dao;
+	private static ICourseDao dao;
+
+	static {
+
+		dao = new ICourseDaoImpl();
+	}
 
 	public ICourseServiceImpl() {
-		dao = new ICourseDaoImpl();
 	}
 
 	public Course getCourseById(Long id) {

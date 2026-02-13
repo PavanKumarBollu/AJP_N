@@ -1,6 +1,5 @@
 package com.pavan.persistence;
 
-import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -9,17 +8,19 @@ import com.pavan.util.HibernateUtil;
 
 public class ICourseDaoImpl implements ICourseDao {
 
-	private Session session = null;
-	private Transaction transaction = null;
+	private static Session session = null;
+	private static Transaction transaction = null;
+
+	static {
+		session = HibernateUtil.getSession();
+	}
 
 	public ICourseDaoImpl() {
-
 	}
 
 	public Course getCourseById(Long id) {
 		Course course = null;
 
-		session = HibernateUtil.getSession();
 
 		if (session != null) {
 			course = session.get(Course.class, id);
@@ -29,7 +30,6 @@ public class ICourseDaoImpl implements ICourseDao {
 	}
 
 	public String insertCourse(Course course) {
-		session = HibernateUtil.getSession();
 		String msg = null;
 
 		if (session != null) {
@@ -39,9 +39,7 @@ public class ICourseDaoImpl implements ICourseDao {
 			session.persist(course);
 			transaction.commit();
 			msg = "Course Has been Saved To the Database";
-		}
-		else
-		{
+		} else {
 			msg = "Course Has Not Saved to the database";
 			transaction.rollback();
 		}
@@ -51,7 +49,6 @@ public class ICourseDaoImpl implements ICourseDao {
 
 	public String updateCourseById(Course course) {
 
-		session = HibernateUtil.getSession();
 		Course c = getCourseById(course.getId());
 		String msg = null;
 
@@ -102,27 +99,22 @@ public class ICourseDaoImpl implements ICourseDao {
 	}
 
 	public String deleteCourseById(Long id) {
-		
+
 		String msg = null;
-		session = HibernateUtil.getSession();
 		transaction = session.beginTransaction();
 		Course course = getCourseById(id);
-		
-		if(course != null)
-		{
-			
+
+		if (course != null) {
+
 			session.remove(course);
 			transaction.commit();
 			msg = "Course Has been delted to from the database";
-		}
-		else
-		{
+		} else {
 			msg = "Please enter the valid course id : " + id;
 			transaction.rollback();
-			
+
 		}
-		
-		
+
 		return msg;
 	}
 
