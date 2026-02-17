@@ -29,4 +29,6 @@
 			<item value="org.eclipse.ui.ide.transfer.keys"/>
 		</list>
 	</section>
+	<section name="WorkbenchPreferenceDialog.dialogBounds">
+	</section>
 </section>
