@@ -42,4 +42,18 @@
     <fullyQualifiedTypeName name="com.pavan.model.AccountDetails"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Version"/>
     <fullyQualifiedTypeName name="com.pavan.model.AccountVersion"/>
+    <fullyQualifiedTypeName name="javax.sql.DataSource"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="org.anudip.dao.UserDao"/>
+    <fullyQualifiedTypeName name="org.anudip.bo.UserLoginBo"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.BeanUtils"/>
+    <fullyQualifiedTypeName name="org.anudip.service.ServiceImpl"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="org.anudip.controller.MainController"/>
+    <fullyQualifiedTypeName name="org.anudip.dto.UserLoginDto"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
 </qualifiedTypeNameHistroy>

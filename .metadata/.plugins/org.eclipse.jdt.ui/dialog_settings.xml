@@ -53,10 +53,10 @@
 		<item key="RemoveFinal" value="false"/>
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="446"/>
-		<item key="DIALOG_Y_ORIGIN" value="11"/>
+		<item key="DIALOG_X_ORIGIN" value="237"/>
+		<item key="DIALOG_Y_ORIGIN" value="7"/>
 		<item key="DIALOG_WIDTH" value="1050"/>
-		<item key="DIALOG_HEIGHT" value="1008"/>
+		<item key="DIALOG_HEIGHT" value="720"/>
 		<item key="DIALOG_FONT_NAME" value="1|Consolas|10.0|0|WINDOWS|1|-20|0|0|0|400|0|0|0|0|3|2|1|49|Consolas"/>
 	</section>
 	<section name="SourceActionDialog.constructors">
@@ -95,10 +95,10 @@
 		<item key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_USE_PERSISTED_LOCATION" value="false"/>
 	</section>
 	<section name="DialogBounds_GenerateToStringDialog">
-		<item key="DIALOG_X_ORIGIN" value="510"/>
-		<item key="DIALOG_Y_ORIGIN" value="11"/>
+		<item key="DIALOG_X_ORIGIN" value="364"/>
+		<item key="DIALOG_Y_ORIGIN" value="7"/>
 		<item key="DIALOG_WIDTH" value="923"/>
-		<item key="DIALOG_HEIGHT" value="999"/>
+		<item key="DIALOG_HEIGHT" value="720"/>
 		<item key="DIALOG_FONT_NAME" value="1|Consolas|10.0|0|WINDOWS|1|-20|0|0|0|400|0|0|0|0|3|2|1|49|Consolas"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.dialogs.OpenTypeSelectionDialog2">
@@ -111,5 +111,19 @@
 			<item key="DIALOG_Y_ORIGIN" value="182"/>
 			<item key="DIALOG_FONT_NAME" value="1|Consolas|10.0|0|WINDOWS|1|-20|0|0|0|400|0|0|0|0|3|2|1|49|Consolas"/>
 		</section>
+	</section>
+	<section name="NewPackageCreationWizard.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="337"/>
+		<item key="DIALOG_Y_ORIGIN" value="84"/>
+		<item key="DIALOG_WIDTH" value="620"/>
+		<item key="DIALOG_HEIGHT" value="425"/>
+		<item key="DIALOG_FONT_NAME" value="1|Consolas|10.0|0|WINDOWS|1|-20|0|0|0|400|0|0|0|0|3|2|1|49|Consolas"/>
+	</section>
+	<section name="NewClassCreationWizard.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="324"/>
+		<item key="DIALOG_Y_ORIGIN" value="7"/>
+		<item key="DIALOG_WIDTH" value="646"/>
+		<item key="DIALOG_HEIGHT" value="601"/>
+		<item key="DIALOG_FONT_NAME" value="1|Consolas|10.0|0|WINDOWS|1|-20|0|0|0|400|0|0|0|0|3|2|1|49|Consolas"/>
 	</section>
 </section>
