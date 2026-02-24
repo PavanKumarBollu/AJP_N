@@ -43,18 +43,21 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="SpringApp100JavaConfiguration"/>
 			<item value="SpringAppXmlDrivenAPP"/>
 			<item value="HB05_DateAndTimeOperations"/>
 			<item value="HB02_SelectOperations"/>
 			<item value="HB01_BasicOperations"/>
 		</list>
 		<list key="name">
+			<item value="SpringApp100%JavaConfiguration"/>
 			<item value="SpringAppXmlDrivenAPP"/>
 			<item value="HB05_DateAndTimeOperations"/>
 			<item value="HB02_SelectOperations"/>
 			<item value="HB01_BasicOperations"/>
 		</list>
 		<list key="artifactId">
+			<item value="SpringApp100JavaConfiguration"/>
 			<item value="SpringAppXmlDrivenAPP"/>
 			<item value="HB05_DateAndTimeOperations"/>
 			<item value="HB02_SelectOperations"/>
